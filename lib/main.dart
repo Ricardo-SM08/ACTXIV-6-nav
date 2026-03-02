@@ -5,6 +5,8 @@ import 'principal/inicio.dart';
 import 'principal/home_screen.dart';
 import 'principal/detalles_producto_screen.dart';
 import 'principal/carrito_screen.dart';
+import 'principal/metodo_pago.dart';
+import 'principal/pago_realizado.dart'; // IMPORTAMOS LA NUEVA PANTALLA
 
 void main() {
   runApp(const MyApp());
@@ -19,16 +21,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'MySelfCar',
       // ==========================================
-      // TEMA GLOBAL PROFESIONAL
+      // TEMA GLOBAL PROFESIONAL (Fuente Cursiva Estética)
       // ==========================================
       theme: ThemeData(
         useMaterial3: true,
         primarySwatch: Colors.purple,
-        // Tipografía cursiva legible para toda la app
         textTheme: GoogleFonts.caveatTextTheme(
           Theme.of(context).textTheme,
         ),
-        // Configuramos el AppBar para no repetir código en las pantallas
         appBarTheme: AppBarTheme(
           backgroundColor: const Color(0xFFDCD0FF), // Lila
           elevation: 0,
@@ -50,6 +50,8 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const MySelfCarHomeScreen(),
         '/carrito': (context) => const CarritoScreen(),
         '/detalles': (context) => const DetallesProductoScreen(),
+        '/pago': (context) => const MetodoPagoScreen(),
+        '/exito': (context) => const PagoRealizadoScreen(), // NUEVA RUTA DE ÉXITO
       },
     );
   }

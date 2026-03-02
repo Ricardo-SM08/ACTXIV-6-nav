@@ -147,12 +147,10 @@ class CarritoScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text("Procesando tu compra...", style: TextStyle(fontSize: 18)), 
-                        backgroundColor: Colors.green
-                      ),
-                    );
+                    // ========================================================
+                    // AQUÍ ESTÁ EL CAMBIO: NAVEGAR A LA PANTALLA DE PAGO
+                    // ========================================================
+                    Navigator.pushNamed(context, '/pago');
                   },
                   child: const Text(
                     "COMPRAR",
